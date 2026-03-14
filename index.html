@@ -15,7 +15,7 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 500px;
             margin: 0 auto;
         }
@@ -27,19 +27,28 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            margin-top: 20px;
         }
         button:hover {
             background: #0056b3;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Fingerprint Sensor App</h1>
-        <p>Click the button below to simulate fingerprint scan</p>
-        <button onclick="alert('Fingerprint scanned!')">
-            Scan Fingerprint
-        </button>
+        <h1>🔍 Fingerprint Sensor</h1>
+        <p id="demo">Click the button to scan fingerprint</p>
+        <button onclick="myFunction()">📱 Scan Fingerprint</button>
     </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "✅ <span class='success'>Fingerprint scanned successfully!</span>";
+        }
+    </script>
 </body>
 </html>
